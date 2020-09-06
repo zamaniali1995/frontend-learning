@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html>
  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
   <title></title>
  </head>
  <body>
-  <div class="regform"><h1> Registeration </h1></div>
+    <div id="title">
+      <h1 id="Registeration"> فرم ثبت نام </h1>
+    </div>
+    <div id="regform">
+      
+      <form action="contactform.php" method="POST" id="form" >
+        <div id="flexbox">
+          <input type="text" name="firstname" id="firstname" placeholder="نام">
+          <input type="text" name="lastname" id="lastname" placeholder="نام خانوادگی">
+        </div> 
+        
+        
+        <input type="text" name="cardid" id="cardid" placeholder="کد ملی">
+        
+      
+        <select name="gender" id="gender">
+          <option value="none">جنسیت</option>
+          <option value="car1">مرد</option>
+          <option value="car2">زن</option>
+          <option value="car3">سایر</option>
+        </select>
+        
+        <input type="submit" id="submit" name="submit">
+        
+      </form>
+    </div>
+
  </body>
-wdad
+
 </html>
