@@ -1,0 +1,90 @@
+html {
+    height:100%;
+    width:100%;
+}
+#title {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px ;
+    grid-template-areas: 
+    ". Registeration .";
+}
+
+::-webkit-input-placeholder { text-align:right; }
+input::-moz-placeholder {text-align : right;}
+#regform {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    
+    ". form .";
+}
+
+#Registeration {
+    grid-area: Registeration;
+    align-self: center;
+    justify-self: center;
+}
+#form {
+    grid-area: form;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1rf;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". flexbox ."
+    ". cardid ."
+    ". gender ."
+    ". submit .";
+    
+}
+#cardid {
+    grid-area: cardid;
+    justify-self: center;
+    align-self: center;
+    width: 50%;
+}
+
+#gender {
+    grid-area: gender;
+    justify-self: center;
+    align-self: center;
+    width:25%;
+}
+
+#firstname {
+    width: 30%;
+    
+    
+    float:right;
+    
+}
+#flexbox {
+    display: flexbox;
+    grid-area: flexbox;
+    justify-self:center ;
+    align-self: center;
+
+}
+
+
+#lastname {
+    
+    width: 30%;
+    
+    
+    float:left;
+    
+}
+#submit {
+    grid-area: submit;
+    justify-self: center;
+    width: 15%;
+}
+
+
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 4px rgba(255,0,0,0.5);
+    border: 1px solid #ddd;
+}
