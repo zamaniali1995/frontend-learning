@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html>
  <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
   <title></title>
  </head>
  <body>
     <div id="title">
       <h1 id="Registeration"> فرم ثبت نام </h1>
     </div>
+    
     <div id="regform">
       
-      <form action="contactform.php" method="POST" id="form" >
+      <form action="" method="GET" id="form" name="regform" onsubmit="return validated()" >
         <div id="flexbox">
-          <input type="text" name="firstname" id="firstname" placeholder="نام">
-          <input type="text" name="lastname" id="lastname" placeholder="نام خانوادگی">
-        </div> 
+          <input type="text" autocomplete="off" name="firstname" id="firstname" placeholder="نام" oninput="return fname_verify()">
+          <input type="text" name="lastname" id="lastname" placeholder="نام خانوادگی" oninput="return lname_verify()">
+        </div>
+        <div id="flexbox1">
+          <div id="firstname_error">Please enter your name</div>
+          <div id="lastname_error">Please enter your lastname</div>
+        </div>
         
         
-        <input type="text" name="cardid" id="cardid" placeholder="کد ملی">
         
-      
+        <input type="text" name="cardid" id="cardid" placeholder="کد ملی" oninput="return cardid_verify()">
+        <div id="cardid_error_box">
+        <div id="cardid_error">Please enter your full id card</div>
+        <div id="cardidnum_error">only numbers are valid</div>
+        </div>  
         <select name="gender" id="gender">
           <option value="none">جنسیت</option>
           <option value="car1">مرد</option>
@@ -29,11 +39,11 @@
           <option value="car3">سایر</option>
         </select>
         
-        <input type="submit" id="submit" name="submit">
+        <input type="submit" value="submit" id="submit" name="submit">
         
       </form>
     </div>
-
+    <script src="valid.js"></script>
  </body>
 
 </html>
