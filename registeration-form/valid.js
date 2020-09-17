@@ -10,6 +10,8 @@ var number = /[0-9]+$/;
 
 lname.addEventListener('input', lname_verify);
 fname.addEventListener('input', fname_verify);
+
+// Each function should consist of at most 3 or 4 lines. So, extract small functions from the validation function to have a clean code.
 function validated(){
     if (fname.value.length < 3){
      fname.style.border = "1px solid red";
